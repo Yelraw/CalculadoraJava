@@ -9,6 +9,7 @@ import java.awt.EventQueue;
 import javax.swing.JPanel;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -305,7 +306,13 @@ public class Tela extends JFrame {
 		
 		btnBotao_ponto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				preenchePainel(".");
+				if(!textField.getText().isEmpty()){
+					if(textField.getText().contains(".")){
+						JOptionPane.showMessageDialog(null, "Já existe um ponto no número inserido!");
+					}else{
+						preenchePainel(".");
+					}
+				}
 			}
 		});
 		
