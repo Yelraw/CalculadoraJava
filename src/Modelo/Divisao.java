@@ -4,7 +4,7 @@ public class Divisao extends Operacao {
 
 	@Override
 	public String getNomeOperacao() {
-		return "÷";
+		return "/";
 	}
 
 	@Override
